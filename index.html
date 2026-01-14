@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+██████╗ ██╗██╗      █████╗ ██╗
+██╔══██╗██║██║     ██╔══██╗██║
+██████╔╝██║██║     ███████║██║
+██╔══██╗██║██║     ██╔══██║██║
+██████╔╝██║███████╗██║  ██║███████╗
+╚═════╝ ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+███╗   ███╗ █████╗ ██╗     ██╗██╗  ██╗
+████╗ ████║██╔══██╗██║     ██║██║ ██╔╝
+██╔████╔██║███████║██║     ██║█████╔╝
+██║╚██╔╝██║██╔══██║██║     ██║██╔═██╗
+██║ ╚═╝ ██║██║  ██║███████╗██║██║  ██╗
+╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝
+What are you doing here?! you sneaky developer...
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* these are just making the layout sure */
+    .wheel-container {
+      overflow: hidden;
+      position: relative;
+      transition: transform 360ms ease;
+      will-change: transform;
+      touch-action: pan-y;
+    }
+
+    .wheel-track {
+      display: block;
+      position: relative;
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- main wrapper for the layout -->
+  <section class="wrapper">
+    <div class="background-video">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/cloudsBg.webm" type="video/webm">
+      </video>
+    </div>
+    <div id="api-status" style="display:none;
+  padding:20px;
+  border-radius:8px;
+  background:#ffe8e8;
+  color:#a40000;
+  font-weight:600;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  position:absolute;
+  left: 50%; top: 55%; transform: translate(-50% , -50%);z-index: 999;">
+
+    </div>
+
+    <header>
+      <nav id="navigation">
+        <div class="nav-left">
+          <a href="/index.html">
+            <div class="logo">
+              <span class="logo-dot"></span>
+              <span class="logo-dot"></span><span class="logo-dot"></span><span class="logo-dot"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search the movies" id="searchBox">
+          <button class="search-icon" id="searchBtn">
+            <i class="fa-solid fa-search"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="main-site">
+      <!-- hero section -->
+      <section class="hero-section">
+        <h1>Search and Discover Movies</h1>
+        <div class="filter-wrapper">
+          <span class="active-indicator"></span>
+          <button class="filter-btn active" data-attribute="populer">Populer</button>
+          <button class="filter-btn" data-attribute="upcoming">Upcoming</button>
+          <button class="filter-btn" data-attribute="top_rated">Top Rated</button>
+        </div>
+      </section>
+      <div class="wheel-container">
+        <button class="move-right controller-btn">
+          <span>
+            <i class="fas fa-angle-right"></i>
+          </span>
+        </button>
+        <button class="move-left controller-btn">
+          <span>
+            <i class="fas fa-angle-left"></i>
+          </span>
+        </button>
+        <!-- cards container with wheel Ui -->
+        <div class="wheel-track">
+          <div class="card card-0">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-1">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-2">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-3" id="active-card">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-4">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-5">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+
+          <div class="card card-6">
+            <div class="movie-details">
+              <div class="details-top">
+                <div class="movie-type">
+                  <div class="badge-top-left"></div>
+                  <div class="badge-top-right"></div>
+                </div>
+                <div class="movie-rating">
+                  <h2><span>
+                      <i class="fa-solid fa-star"></i>
+                    </span></h2>
+                </div>
+              </div>
+              <div class="details-bottom">
+                <div class="card-content">
+                  <h3></h3>
+                  <div class="movie-dateType">
+                    <span class="movie-data"></span>
+                    •
+                    <span class="what-type"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- this is the movie pop with trailer  -->
+  <div id="trailer-overlay" class="hidden">
+    <div class="trailer-bg">
+      <iframe id="trailerPlayer" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+
+    <div class="trailer-gradient"></div>
+
+    <div class="trailer-content">
+      <div class="movie-rating">
+        <span class="tag rating" id="trailerRating"></span>
+        <i class="fa-solid fa-star" id="fa-star"></i>
+      </div>
+      <h1 id="trailerTitle"></h1>
+      <div class="meta">
+        <span><i class="fa-solid fa-play"></i>
+          <span id="">TV</span>
+        </span>
+        <span><i class="fa-solid fa-calendar-days"></i> <span id="trailerYear"></span></span>
+      </div>
+      <p id="trailerOverview" class="overview"></p>
+      <div class="actions">
+        <button class="btn primary"><i class="fa-solid fa-play"></i>Watch Now</button>
+      </div>
+    </div>
+    <button id="closeTrailer" class="close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" fill="currentColor" viewBox="0 0 256 256">
+        <path
+          d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z">
+        </path>
+      </svg>
+    </button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
