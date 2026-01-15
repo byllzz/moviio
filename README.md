@@ -1,4 +1,4 @@
-# <a href="https://cineseek.vercel.app" target="_blank">Moviio  — Discover Movies, Watch Trailers & Explore Cinema</a>
+# <a href="https://moviio.vercel.app" target="_blank">Moviio  — Discover Movies, Watch Trailers & Explore Cinema</a>
 
 **Moviio** is a modern, interactive movie discovery web app powered by **TMDB**. Browse popular, top-rated, and upcoming movies, search by title, swipe or drag through a smooth **3D-style cinematic carousel**, and instantly watch official trailers in a fullscreen movie-theater overlay.
 
@@ -13,7 +13,7 @@ Built for **speed, motion, and immersion** — all running entirely in the brows
   <a href="https://github.com/byllzz">
     <img src="https://img.shields.io/badge/Author-Bilal%20Malik-9B72FF.svg?style=flat" />
   </a>
-  <a href="https://github.com/byllzz/cineseek/releases">
+  <a href="https://github.com/byllzz/moviio/releases">
     <img src="https://img.shields.io/badge/Latest%20Release-14%20Jan%202026-9B72FF.svg" />
   </a>
 </p>
@@ -21,7 +21,7 @@ Built for **speed, motion, and immersion** — all running entirely in the brows
 
 [![Visit Moviio](https://img.shields.io/badge/View-Moviio-9B72FF?style=flat)](https://moviio.vercel.app)
 
-<img width="100%" alt="CineSeek Preview" src="./assets/preview.png" />
+<img width="100%" alt="Moviio Preview" src="./assets/preview.png" />
 
 ⭐ **Star the repo if you like it — it really helps!**
 
