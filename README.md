@@ -1,6 +1,8 @@
-# <a href="https://cineseek.vercel.app" target="_blank">CineSeek — Discover Movies, Watch Trailers & Explore Cinema</a>
+# <a href="https://cineseek.vercel.app" target="_blank">Moviio  — Discover Movies, Watch Trailers & Explore Cinema</a>
 
-CineSeek is a modern, interactive movie discovery web app powered by TMDB. Browse popular, top-rated, and upcoming movies, search by title, swipe or drag through a smooth 3D-style carousel, and instantly watch official trailers in a cinematic fullscreen overlay. Designed for speed, fluid motion, and an immersive browsing experience — all running entirely in the browser.
+**Moviio** is a modern, interactive movie discovery web app powered by **TMDB**. Browse popular, top-rated, and upcoming movies, search by title, swipe or drag through a smooth **3D-style cinematic carousel**, and instantly watch official trailers in a fullscreen movie-theater overlay.
+
+Built for **speed, motion, and immersion** — all running entirely in the browser.
 
 <p align="left">
   <a href="./LICENSE">
@@ -17,7 +19,7 @@ CineSeek is a modern, interactive movie discovery web app powered by TMDB. Brows
 </p>
 <br />
 
-[![Visit CineSeek](https://img.shields.io/badge/View-CineSeek-9B72FF?style=flat)](https://cineseek.vercel.app)
+[![Visit Moviio](https://img.shields.io/badge/View-Moviio-9B72FF?style=flat)](https://moviio.vercel.app)
 
 <img width="100%" alt="CineSeek Preview" src="./assets/preview.png" />
 
@@ -71,8 +73,8 @@ CineSeek is a modern, interactive movie discovery web app powered by TMDB. Brows
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/byllzz/cineseek.git
-cd cineseek
+git clone https://github.com/byllzz/moviio.git
+cd moviio
 ```
 
 # License 📄
