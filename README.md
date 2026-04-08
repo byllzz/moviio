@@ -82,6 +82,6 @@ cd moviio
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
 
-# Feedback / Suggestions
+# Feedback 
 
 Reach out at bilalmlkdev@gmail.com. If you like this project, please ⭐ star the repo — it motivates future updates!
