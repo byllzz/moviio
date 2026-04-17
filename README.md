@@ -27,7 +27,7 @@ Built for **speed, motion, and immersion** — all running entirely in the brows
 
 ---
 
-# ✨ Features
+#  Features
 
 <p align="left">
 ✔️ Interactive Movie Carousel (7-card cinematic layout)<br>
@@ -84,4 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
 
 # Feedback 
 
-Reach out at bilalmlkdev@gmail.com. If you like this project, please ⭐ star the repo — it motivates future updates!
+Reach out at **bilalmlkdev@gmail.com**. If you like this project, please ⭐ star the repo — it motivates future updates!
