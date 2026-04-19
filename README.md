@@ -1,4 +1,4 @@
-# <a href="https://moviio.vercel.app" target="_blank">Moviio - Discover Movies, Watch Trailers & Explore Cinema</a>
+# <a href="https://moviio.vercel.app" target="_blank">Moviio - Discover Movies, Watch Youtube Trailers </a>
 
 **Moviio** is a modern, interactive movie discovery web app powered by **TMDB**. Browse popular, top-rated, and upcoming movies, search by title, swipe or drag through a smooth **3D-style cinematic carousel**, and instantly watch official trailers in a fullscreen movie-theater overlay.
 
