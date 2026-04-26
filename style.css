@@ -142,6 +142,7 @@ header {
   font-size: 16px;
   border-radius: 999px;
   background: transparent;
+  font-family: "Outfit" ,sans-serif;
 }
 
 .search-wrapper .search-icon {

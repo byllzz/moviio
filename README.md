@@ -2,7 +2,7 @@
 
 **Moviio** is a modern, interactive movie discovery web app powered by **TMDB**. Browse popular, top-rated, and upcoming movies, search by title, swipe or drag through a smooth **3D-style cinematic carousel**, and instantly watch official trailers in a fullscreen movie-theater overlay.
 
-Built for **speed, motion, and immersion** — all running entirely in the browser.
+Built for **speed, motion, and immersion** - all running entirely in the browser.
 
 <p align="left">
   <a href="./LICENSE">
@@ -82,6 +82,6 @@ cd moviio
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
 
-# Feedback 
+# Feedback
 
 Reach out at **bilalmlkdev@gmail.com**. If you like this project, please ⭐ star the repo — it motivates future updates!
