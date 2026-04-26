@@ -470,7 +470,8 @@
   async function fetchTrailer(movieId) {
     try {
       const res = await fetch(`/api/tmdb?trailer=${movieId}`);
-      alert("hey waiting for trailer")
+      showApiMessage(
+        "Wait! fetching trailer from Youtube")
       if (!res.ok) return null;
 
       const data = await res.json();
